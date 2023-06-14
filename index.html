@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>index</h1>
+<button id="btn">parse excel</button>
+
+<script lang="javascript" src="https://cdn.sheetjs.com/xlsx-0.19.3/package/dist/xlsx.full.min.js"></script>
+<!--<script type="module" src="./main.js"></script>-->
+<script type="module">
+    /** Todo: run local */
+    import * as XLSX from "https://cdn.sheetjs.com/xlsx-0.19.3/package/xlsx.mjs";
+
+    import {parseExcel} from "./main.js";
+
+    const excelButton = document.getElementById('btn');
+    const filename = "Presidents.xslx";
+    excelButton.addEventListener('click', () => {
+      console.log('clicked!');
+      parseExcel(filename);
+    });
+
+
+    console.log("DONE!");
+
+</script>
+
+
+</body>
+</html>
