@@ -70,3 +70,5 @@ export function parseExcel(filename) {
     fs.writeFileSync(`${outputDir}/Localizable-es.strings`, generateStrings(translationsES));
 
 }
+
+parseExcel('example.xlsx');
